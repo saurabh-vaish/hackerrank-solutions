@@ -15,11 +15,13 @@ public class RemoveDuplicateFromArray {
         HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
         for (int i=0;i<ar.length;i++)
         {
-            for(int j=0;j<ar.length;j++)
+            if(!(map.containsKey(ar[i])))
             {
-                if(!(map.containsKey(ar[i]))){
-                    if (ar[j] == ar[i]) {
-                        a[ar[i]]++;
+                for(int j=0;j<ar.length;j++)
+                {
+                    if (ar[j] == ar[i]) 
+                    {
+                       a[ar[i]]++;
                     }
                 }
             }
