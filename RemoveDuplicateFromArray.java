@@ -15,43 +15,22 @@ public class RemoveDuplicateFromArray {
         HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
         for (int i=0;i<ar.length;i++)
         {
-            if(!(map.containsKey(ar[i])))
+          if(!(map.containsKey(ar[i])))
+          {
+            for(int j=0;j<ar.length;j++)
             {
-                for(int j=0;j<ar.length;j++)
-                {
-                    if (ar[j] == ar[i]) 
-                    {
-                       a[ar[i]]++;
+                
+                    if (ar[j] == ar[i]) {
+                        a[i]++;
                     }
-                }
+             }
+           
+            map.put(ar[i],a[i]);
             }
-            map.put(ar[i],a[ar[i]]);
         }
         System.out.println(map.toString());
 
-
-        /* or without using collections
-        int c=0,d=0;
-        for (int i=0;i<ar.length-1;i++)
-        {
-            if(ar[i]!=ar[i+1])
-            {
-                for (int j = 0; j < ar.length; j++) {
-                    if (ar[j] == ar[i]) {
-                        a[ar[i]]++;
-
-                    }
-                }
-                m[ar[i]]=ar[i];
-            }
-
-        }
-        for (int i=0;i<a.length;i++)
-        {
-
-             if(a[i]!=0)
-            System.out.println(m[i]+"="+a[i]);
-        }
+		
 
         */
     }
