@@ -30,9 +30,7 @@ public class RemoveDuplicateFromArray {
         }
         System.out.println(map.toString());
 
-		
-
-        */
+	
     }
 }
 
